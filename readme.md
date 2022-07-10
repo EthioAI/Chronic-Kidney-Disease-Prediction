@@ -26,3 +26,7 @@ The two most common causes of CKD are diabetes and high blood pressure. Diabetes
 - Support vector machine was severly overfitting the dataset
 - Decision tree was not fitting in quite as good as random forest. Because, the accuracy and other metrics were very low relatively to the random forest. Since, random forest is collection of decision trees, that will cover the issue of a single decision tree algorithm.
 - RandomForest was fitting in the dataset quite very well. Ofcourse there is a little bit of over fitting but better than support vector machine. So, my final model is Random forest algorithm.
+<br/>
+<p align="center">
+  <img src="imgs\rec.png" width="700" >
+</p>
