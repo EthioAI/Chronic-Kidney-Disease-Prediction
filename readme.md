@@ -1,4 +1,7 @@
-![Banner](https://github.com/Abdesol/Chronic-Kidney-Disease-Prediction/blob/master/imgs/banner.jpg)
+<p align="center">
+  <img src="imgs\banner.jpg" width="1000" >
+</p>
+
 # Chroice Kidney Disease Prediction
 This is a machine learning project trained on a data of people who have chronic kidney disease and those who don't have.
 <br/>
@@ -23,6 +26,3 @@ The two most common causes of CKD are diabetes and high blood pressure. Diabetes
 - Support vector machine was severly overfitting the dataset
 - Decision tree was not fitting in quite as good as random forest. Because, the accuracy and other metrics were very low relatively to the random forest. Since, random forest is collection of decision trees, that will cover the issue of a single decision tree algorithm.
 - RandomForest was fitting in the dataset quite very well. Ofcourse there is a little bit of over fitting but better than support vector machine. So, my final model is Random forest algorithm.
-<br/><br/>
-## How can you use my model?
-[Website link](https://google.com)
