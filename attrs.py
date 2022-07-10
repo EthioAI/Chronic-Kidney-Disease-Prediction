@@ -61,29 +61,25 @@ class DummyColumnTransform(BaseEstimator, TransformerMixin):
         else:
             return X
 
-    def fit_transform(self,X,y=None):
-        return self.fit(X,y).transform(X)
+age_i, bp_i, bgr_i, su_i, bu_i, al_i, = 0, 1, 5, 4, 6, 3
 
-class DataSetCleaner(BaseEstimator, TransformerMixin):
+class CombinedAttributesAdder(BaseEstimator, TransformerMixin):
     """
-    Transforms the data set by removing columns that are not
-    needed for the analysis and make it similar with the train set.
-    And also removes any row that has nan value.
+    For attributes/columns combination creation
+    It should be in a format of: [column_name]_per_[column_name]
     """
-    def __init__(self, columns_to_keep):
-        self.columns_to_keep = columns_to_keep
+    def __init__(self):
+        pass
 
     def fit(self, X, y=None):
         return self
 
     def transform(self, X):
-        X = X[self.columns_to_keep]
-        X = X.dropna(axis=0)
-        return X
+        bp_per_age = X.iloc[:, bp_i] / X.iloc[:, age_i]
+        bgr_per_su = X.iloc[:, su_i] / X.iloc[:, bgr_i]
+        bu_per_al = X.iloc[:, al_i] / X.iloc[:, bu_i]
 
-    def fit_transform(self, X, y=None):
-        return self.fit(X, y).transform(X)
-
+        return np.c_[X, bp_per_age, bgr_per_su, bu_per_al]
 
 def analyze_model(model, X_test, y_test):
     """

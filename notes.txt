@@ -21,6 +21,11 @@ Solution for columns with problem:
     - Drop them
 4. Drop rows which have any null record.
 
+Some features to be added:
+1. bp/age (blood pressure per age)
+2. bgr/su (blood glucose random per sugar)
+3. bu/al (blood urea per albumin)
+
 
 High correlations:
 1. hemo & sg - 70%
@@ -36,4 +41,4 @@ catagorical-textual columns:
 
 --> All catagorical-textual attributes are ordinal.. so, we will use Label encoding
 
-Columns that needs scaling:
+--> We will scale all numerical attributes
