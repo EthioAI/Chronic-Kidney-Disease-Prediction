@@ -1,0 +1,39 @@
+Columns with problem:
+1. rbc
+    - A lot of null records.
+    - It is catagorical column.
+2. rc and wc
+    - A lot of null records.
+3. sod and pot
+    - Some null records.
+    - slightly related column
+4. cad, appet, pe and ane
+    - unbalanced data(catagories are unbalanced)
+5. ba, appet and dm
+    - unrelated or slightly related column
+
+Solution for columns with problem:
+1. rbc
+    - drop rbc since it has a lot of null records and at the same time, it is catagorical column. And the catagories are also unbalanced
+2. rc and wc
+    - They had a very good correlation but since they have a lot of null records, we have to drop them.
+3. cad, sod, pot appet, ba, appet, dm, pe and ane
+    - Drop them
+4. Drop rows which have any null record.
+
+
+High correlations:
+1. hemo & sg - 70%
+2. pcv & sg - 69%
+3. hemo & pcv - 89%
+4. bu & sc - 64%
+5. al & bu - 57%
+6. su & bgr - 72%
+
+catagorical-textual columns:
+1. pc - ordinal
+2. htn - ordinal
+
+--> All catagorical-textual attributes are ordinal.. so, we will use Label encoding
+
+Columns that needs scaling:
