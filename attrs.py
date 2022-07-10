@@ -1,10 +1,11 @@
 import pandas as pd
 import numpy as np
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 
 from sklearn.preprocessing import LabelEncoder
 from sklearn.base import BaseEstimator, TransformerMixin
-from sklearn.metrics import mean_squared_error
-from sklearn.model_selection import cross_val_score
+from sklearn.metrics import f1_score, precision_score, recall_score, accuracy_score, confusion_matrix
 
 
 def load_dataset(path):
@@ -12,7 +13,6 @@ def load_dataset(path):
     Loads the dataset from the given path.
     """
     return pd.read_csv(path, index_col="id")
-
 
 class MultiColumnLabelEncoder:
     def __init__(self,columns = None):
@@ -85,12 +85,14 @@ def analyze_model(model, X_test, y_test):
     """
     Analyzes the model's performance on the test set.
     """
-    print(f"Score: {model.score(X_test, y_test)}")
+    y_pred = model.predict(X_test)
 
-    predictions = model.predict(X_test)
-    print(f"Predictions: {predictions}")
+    conf_mx = confusion_matrix(y_test, y_pred)
+    plt.matshow(conf_mx, cmap=plt.cm.gray)
+    plt.show()
 
-    model_mse = mean_squared_error(y_test, predictions)
-    model_rmse = np.sqrt(model_mse)
-    print(f"Root mean squared error: {model_rmse}")
+    print('Precision: %.3f' % precision_score(y_test, y_pred))
+    print('Recall: %.3f' % recall_score(y_test, y_pred))
+    print('F1: %.3f' % f1_score(y_test, y_pred, average='weighted', labels=np.unique(y_pred)))
+    print('Accuracy: %.3f' % accuracy_score(y_test, y_pred))
 
