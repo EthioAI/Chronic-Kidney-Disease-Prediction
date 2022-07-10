@@ -1,0 +1,8 @@
+image: lucone83/streamlit-nginx
+port: 8080
+env:
+  - name: ENV
+    value: VAR
+resources:
+  replicas: 1
+  instanceType: C4

@@ -1,3 +1,4 @@
+![Banner](https://user-images.githubusercontent.com/63385587/135706502-35fee274-a8d2-48da-b9a9-50213ae3104a.png)
 # Chroice Kidney Disease Prediction
 This is a machine learning project trained on a data of people who have chronic kidney disease and those who don't have.
 <br/>
