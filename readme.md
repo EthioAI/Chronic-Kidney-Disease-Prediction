@@ -7,7 +7,7 @@ This is a machine learning project that is trained on a collected data of people
 <br/>
 It includes a lot of data about the individual and I used that feature to make an optimal model that will predict if someone is suffering from this disease or not.
 <br/><br/>
-## What Chronic Kidney Disease?
+## What is Chronic Kidney Disease?
 Chronic kidney disease (CKD) means your kidneys are damaged and can't filter blood the way they should. The disease is called “chronic” because the damage to your kidneys happens slowly over a long period of time. This damage can cause wastes to build up in your body. CKD can also cause other health problems. [Source](https://www.niddk.nih.gov/health-information/kidney-disease/chronic-kidney-disease-ckd/what-is-chronic-kidney-disease)
 <br/><br/>
 ## What causes Chronic Kidney Disease?
