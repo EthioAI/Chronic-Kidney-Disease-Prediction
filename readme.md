@@ -2,8 +2,8 @@
   <img src="imgs\banner.jpg" width="1000" >
 </p>
 
-# Chroice Kidney Disease Prediction
-This is a machine learning project trained on a data of people who have chronic kidney disease and those who don't have.
+# Chronic Kidney Disease Prediction
+This is a machine learning project that is trained on a collected data of people who are infected by these disease and some other people.
 <br/>
 It includes a lot of data about the individual and I used that feature to make an optimal model that will predict if someone is suffering from this disease or not.
 <br/><br/>
